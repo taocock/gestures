@@ -10,36 +10,48 @@
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
 
-    <link rel="stylesheet" type="text/css" href="css/camara.css" />
-    <title>Camara</title>
+    <link rel="stylesheet" type="text/css" href="css/gestures.css" />
+    <title>Hello World</title>
 </head>
 
 <body>
-  <div class="header">
-  <!--  <img align="left" src="img/camare.png"/> -->
-    <span>Mi Camara con filtros</span>
-  </div>
+<!--
+    <div class="app">        
+        <h1>PhoneGap</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+    </div>
+    
+    
 
-  <!-- <img src="" id="foto"/>   Video 1.4-->
-  <canvas id="foto"></canvas>
-
-
-  <div class="button-container">
-    <button id="button-action" class="button">
-      Tomar Foto  
-    </button> 
-  </div>
-
-  <div class="footer">
-    Creando Apps. Aprende a programa aplicaciones móviles
-  </div>
-  <script type="text/javascript" src="cordova.js"></script>
-  <script type="text/javascript" src="js/fastclick.js"></script>
-  <!--
-  <script type="text/javascript" src="js/hammer.min.js"></script>
 -->
-  <script type="text/javascript" src="js/camara.js"></script>
+    <button id="claro"> Claro </button>
+    <button id="oscuro">Oscuro</button>
+    <div id="zona-gestos"></div>
+    
+    <h1 id="info">gestoh </h1>
+    
 
+
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/hammer.min.js"></script>
+    <!--
+    <script type="text/javascript" src="js/angular/angular.min.1.2.9.js"></script>
+
+    <script type="text/javascript" src="js/angular/ctrlMain.js"></script>
+    -->    
+    <script type="text/javascript" src="js/gestures.js"></script>
+
+    <!--
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+-->
 </body>
 
 </html>
