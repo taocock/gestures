@@ -1,0 +1,41 @@
+
+<div id="listPedidos" ng-controller="ctrlLista">
+	<div ng-repeat = "row in DB.pedidos track by $index"
+		class='item'
+		ng-class="{par:$index%2}"	
+		ng-click="verMateriales(row)"	
+		>
+
+			<span class="fl">{{row.id}}</span>
+			<span class="fr">{{row.fAlta | date:'dd/MM/yy'}}</span>
+			<span class="fc"></span>
+			
+			<span class="fl">{{DB.usuarios | getRowSearch :'id':row.pedidopor_id:'nombre'}}</span>			
+			
+			<span class="fr">{{DB.servicios | getRowSearch :'id':row.servicio_id:'nombre'}}</span>
+			<span class="fc"></span>			
+			<div class="datagrid" ng-class="">
+				<div style="border-bottom:1px solid">
+					<div class="fl">Descripcion </div>
+					<div style="border-left:1px solid;width: 1.5em;padding-right:2px;text-align: right;" class="fr">S </div>
+					<div style="border-left:1px solid;width: 1.5em;text-align: right;" class="fr">R </div>	
+					<div style="border-left:1px solid;width: 1.5em;text-align: right;" class="fr">P </div>
+					<div class="fc">	</div>				
+				</div>
+				<div ng-repeat = "line in row.materiales track by $index ">
+				<div style="border-bottom:1px solid">
+						<div class="fl">{{DB.materiales | getRowSearch : 'id':line.material_id:'nombre'}}</div>
+						<div style="border-left:1px solid;width: 1.5em;text-align: right;" class="fr">{{line.salida}} </div>
+						<div style="border-left:1px solid;width: 1.5em;text-align: right;" class="fr">{{line.revisado}} </div>
+						<div style="border-left:1px solid;width: 1.5em;text-align: right;" class="fr">{{line.pedido}} </div>
+						<div class="fc"></div>
+				</div>
+				</div>
+			</div>
+			<div>
+					demofg
+			</div>
+			<div>{{$index%2}}</div>
+	</div>
+</div>
+

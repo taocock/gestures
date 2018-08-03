@@ -1,4 +1,4 @@
-var app = {
+var appCordova = {
 	inicio : function () {
 		this.iniciaFastClick();
 		this.iniciaBoton();
@@ -20,7 +20,7 @@ var app = {
 			targetHeight:300,
 			correctOrientation:true
 		};		
-		navigator.camera.getPicture(app.fotoTomada, app.errorAlTomarFoto,opciones);		
+		navigator.camera.getPicture(appCordova.fotoTomada, appCordova.errorAlTomarFoto,opciones);		
 	},
 
 	/* foto tomada version Video 1
@@ -33,7 +33,7 @@ var app = {
 		var img = document.createElement('img');
 		img.src = imagenURI;
 		img.onload = function(){
-			app.pintarFoto(img);
+			appCordova.pintarFoto(img);
 		}
 
 	},
@@ -54,7 +54,7 @@ var app = {
 
 if ('addEventListener' in document){
 	document.addEventListener('DOMContentLoaded',function(){
-		app.inicio();
+		appCordova.inicio();
 		//alert("ya esta cargado");
 	},false);
 }
